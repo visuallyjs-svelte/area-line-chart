@@ -11,9 +11,9 @@
                 <div class="vjs-chart-example-comments">{chart.comments}</div>
             {/if}
             {#if chart.type === 'area'}
-                <AreaChartComponent className="vjs-chart-example-container" options={chart.options} />
+                <AreaChartComponent className="vjs-chart-example-container" options={chart.options.config} url={chart.options.url} data={chart.options.data}/>
             {:else if chart.type === 'line'}
-                <LineChartComponent className="vjs-chart-example-container" options={chart.options} />
+                <LineChartComponent className="vjs-chart-example-container" options={chart.options.config} url={chart.options.url} data={chart.options.data} />
             {/if}
         </div>
     {/each}
